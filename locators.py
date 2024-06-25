@@ -4,8 +4,8 @@ from selenium.webdriver.common.by import By
 class Locators:
     ACCOUNT_MAIN_BUTTON = (By.LINK_TEXT, 'Личный Кабинет')   # Кнопка входа в аккаунт на гланой
     REGISTRATION_BUTTON = (By.LINK_TEXT, 'Зарегистрироваться')   # Кнопка "Зарегистрироваться" на странице входа в аккаунт
-    NAME = (By.XPATH, '//form/fieldset[1]/div/div/input[@class="text input__textfield text_type_main-default"]')   # Поле ввода имени на странице регистрации
-    EMAIL = (By.XPATH, '//form/fieldset[2]/div/div/input[@class="text input__textfield text_type_main-default"]')   # Поле ввода эл почты на странице регистрации
+    NAME = (By.XPATH, "//label[text() = 'Имя']/following-sibling::input")   # Поле ввода имени на странице регистрации
+    EMAIL = (By.XPATH, "//label[text() = 'Email']/following-sibling::input")   # Поле ввода эл почты на странице регистрации
     PASSWORD = (By.NAME, 'Пароль')   # Поле ввода почты на странице регистрации
     AUTH_BUTTON = (By.XPATH, '//button[text()="Зарегистрироваться"]')   # Кнопка "Зарегистрироваться" на странице регистрации
     LOGIN_MASSAGE = (By.XPATH, '//h2[text()="Вход"]')   # Надпись "Вход" на странице входа в аккаунт
@@ -19,14 +19,13 @@ class Locators:
     NEW_PASSWORD_BUTTON = (By.XPATH, '//a[@href="/forgot-password"]')   # Кнопка "Восстановить пароль" на странице входа в кабинет
     LOGIN_BUTTON_NEW_PASSWORD_PAGE = (By.XPATH, '//a[@href="/login"]')   # Кнопка "Войти" на странице восстановления пароля
     CONSTRUCTOR_BUTTON = (By.LINK_TEXT, 'Конструктор')   # Кнопка "Конструктор" в хедере
-    LOGO = (By.XPATH, '//div/a')   # Логотип Stellar Burgers
+    LOGO = (By.XPATH, '//a[@href="/"]')   # Логотип Stellar Burgers
     LOGOUT_BUTTON = (By.XPATH, '//button[@class="Account_button__14Yp3 text text_type_main-medium text_color_inactive"]')  # Кнопка "Выход" в личном кабинете
     SAUCE_SECTION = (By.XPATH, '//span[text()="Соусы"]')   # Кнопка "Соусы" на главной
     BUNS_SECTION = (By.XPATH, '//span[text()="Булки"]')   # Кнопка "Булки" на главной
     FILLING_SECTION = (By.XPATH, '//span[text()="Начинки"]')   # Кнопка "Начинки" на главной
     BUNS_TITLE = (By.XPATH, '//h2[text()="Булки"]')   # Заголовок "Булки" в разделе "Булки"
     SAUCE_TITLE = (By.XPATH, '//h2[text()="Соусы"]')  # Заголовок "Соусы" в разделе "Соусы"
-    SAUCE_PICTURE = (By.XPATH, '//main/section[1]/div[2]/ul[2]/a[1]')   # Первая картинка соуса в разделе соусов
     FILLING_TITLE = (By.XPATH, '//h2[text()="Начинки"]')   # Заголовок "Начинки" в разделе "Начинки"
     CURRENT_STATE_SAUCE = (By.XPATH, '//div[@class="tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect"]/span[text()="Соусы"]')   # Кнопка "Соусы" на главной, когда открыт раздел с соусами
     CURRENT_STATE_BUNS = (By.XPATH, '//div[@class="tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect"]/span[text()="Булки"]')    # Кнопка "Булки" на главной, когда открыт раздел с булками
